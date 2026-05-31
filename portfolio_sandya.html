@@ -10,260 +10,64 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    body {
-      font-family: 'Lato', sans-serif;
-      background: #f5f0fc;
-      min-height: 100vh;
-      color: #2C2C2A;
-    }
+    body { font-family: 'Lato', sans-serif; background: #f5f0fc; min-height: 100vh; color: #2C2C2A; }
 
     /* ── HEADER & NAV ── */
-    .porto-header {
-      background: #fff;
-      border-bottom: 0.5px solid #d8ccf0;
-      padding: 16px 20px 0;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-
-    .porto-brand {
-      text-align: center;
-      padding-bottom: 12px;
-      border-bottom: 0.5px solid #ede8fb;
-    }
-
-    .porto-brand-name {
-      font-family: 'Playfair Display', serif;
-      font-size: 14px;
-      color: #3C3489;
-      font-weight: 500;
-      letter-spacing: 0.03em;
-      line-height: 1.4;
-    }
-
-    .porto-brand-sub {
-      font-size: 10px;
-      color: #AFA9EC;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      margin-top: 2px;
-    }
-
-    .porto-nav {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 0;
-      padding: 0 4px;
-    }
-
-    .porto-nav button {
-      font-family: 'Lato', sans-serif;
-      font-size: 10px;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: #9e97c8;
-      background: none;
-      border: none;
-      padding: 10px 10px;
-      cursor: pointer;
-      border-bottom: 2px solid transparent;
-      transition: color 0.2s, border-color 0.2s;
-      white-space: nowrap;
-    }
-
-    .porto-nav button.active,
-    .porto-nav button:hover {
-      color: #534AB7;
-      border-bottom: 2px solid #534AB7;
-    }
+    .porto-header { background: #fff; border-bottom: 0.5px solid #d8ccf0; padding: 16px 20px 0; position: sticky; top: 0; z-index: 100; }
+    .porto-brand { text-align: center; padding-bottom: 12px; border-bottom: 0.5px solid #ede8fb; }
+    .porto-brand-name { font-family: 'Playfair Display', serif; font-size: 14px; color: #3C3489; font-weight: 500; letter-spacing: 0.03em; line-height: 1.4; }
+    .porto-brand-sub { font-size: 10px; color: #AFA9EC; letter-spacing: 0.16em; text-transform: uppercase; margin-top: 2px; }
+    .porto-nav { display: flex; justify-content: center; flex-wrap: wrap; gap: 0; padding: 0 4px; }
+    .porto-nav button { font-family: 'Lato', sans-serif; font-size: 10px; letter-spacing: 0.09em; text-transform: uppercase; color: #9e97c8; background: none; border: none; padding: 10px 9px; cursor: pointer; border-bottom: 2px solid transparent; transition: color 0.2s, border-color 0.2s; white-space: nowrap; }
+    .porto-nav button.active, .porto-nav button:hover { color: #534AB7; border-bottom: 2px solid #534AB7; }
 
     /* ── PAGES ── */
     .porto-page { display: none; padding: 28px 16px; }
     .porto-page.active { display: block; }
 
-    /* ── SHARED COMPONENTS ── */
-    .lavender-divider {
-      width: 50px;
-      height: 1px;
-      background: #AFA9EC;
-      margin: 12px auto;
-    }
-
-    .section-tag {
-      display: inline-block;
-      background: #EEEDFE;
-      color: #3C3489;
-      font-size: 10px;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      padding: 4px 12px;
-      border-radius: 20px;
-      margin-bottom: 14px;
-    }
-
-    .card-lavender {
-      background: #fff;
-      border: 0.5px solid #d8ccf0;
-      border-radius: 12px;
-      padding: 20px;
-      margin-bottom: 16px;
-    }
-
-    .quote-block {
-      border-left: 2px solid #AFA9EC;
-      padding-left: 14px;
-      font-style: italic;
-      color: #534AB7;
-      font-family: 'Playfair Display', serif;
-      font-size: 14px;
-      margin: 20px 0;
-      line-height: 1.7;
-    }
-
-    .mission-item {
-      display: flex;
-      gap: 10px;
-      align-items: flex-start;
-      margin-bottom: 12px;
-    }
-
-    .mission-num {
-      background: #EEEDFE;
-      color: #534AB7;
-      border-radius: 50%;
-      width: 24px;
-      height: 24px;
-      min-width: 24px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 11px;
-      font-weight: 500;
-      margin-top: 2px;
-    }
-
+    /* ── SHARED ── */
+    .lavender-divider { width: 50px; height: 1px; background: #AFA9EC; margin: 12px auto; }
+    .section-tag { display: inline-block; background: #EEEDFE; color: #3C3489; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 14px; }
+    .card-lavender { background: #fff; border: 0.5px solid #d8ccf0; border-radius: 12px; padding: 20px; margin-bottom: 16px; }
+    .quote-block { border-left: 2px solid #AFA9EC; padding-left: 14px; font-style: italic; color: #534AB7; font-family: 'Playfair Display', serif; font-size: 14px; margin: 20px 0; line-height: 1.7; }
+    .mission-item { display: flex; gap: 10px; align-items: flex-start; margin-bottom: 12px; }
+    .mission-num { background: #EEEDFE; color: #534AB7; border-radius: 50%; width: 24px; height: 24px; min-width: 24px; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 500; margin-top: 2px; }
     .mission-item p { margin: 0; }
-
-    /* ── HOME ── */
-    .home-hero {
-      text-align: center;
-      padding: 28px 0 16px;
-    }
-
-    .home-hero-line {
-      width: 36px;
-      height: 1px;
-      background: #AFA9EC;
-      margin: 0 auto 16px;
-    }
-
-    .home-hero h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 20px;
-      color: #3C3489;
-      font-weight: 500;
-      margin: 0 0 8px;
-      line-height: 1.4;
-    }
-
-    .home-hero-sub {
-      color: #7a6fa8;
-      font-size: 11px;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-    }
-
-    .home-hero-quote {
-      color: #888780;
-      font-size: 13px;
-      max-width: 420px;
-      margin: 12px auto 0;
-      font-style: italic;
-      font-family: 'Playfair Display', serif;
-      line-height: 1.7;
-    }
-
-    .home-cards {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 10px;
-      margin-top: 24px;
-    }
-
-    .home-card {
-      background: #fff;
-      border: 0.5px solid #d8ccf0;
-      border-radius: 12px;
-      padding: 16px 10px;
-      text-align: center;
-      cursor: pointer;
-      transition: border-color 0.2s;
-    }
-
-    .home-card:hover { border-color: #AFA9EC; }
-
-    .home-card i {
-      font-size: 20px;
-      color: #7F77DD;
-      margin-bottom: 6px;
-      display: block;
-    }
-
-    .home-card span {
-      font-size: 10px;
-      color: #534AB7;
-      font-weight: 500;
-      letter-spacing: 0.04em;
-      line-height: 1.3;
-      display: block;
-    }
-
-    /* ── PROFIL ── */
-    .profil-header { text-align: center; margin-bottom: 24px; }
-
-    .photo-circle {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      background: #EEEDFE;
-      border: 2px solid #AFA9EC;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 20px;
-      overflow: hidden;
-    }
-
-    .photo-circle img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .photo-placeholder {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 6px;
-      color: #7F77DD;
-      font-size: 10px;
-      text-align: center;
-      padding: 0 8px;
-    }
-
-    /* ── TYPOGRAPHY ── */
     p { line-height: 1.75; font-size: 13px; margin: 0 0 10px; }
     h2 { font-family: 'Playfair Display', serif; font-size: 18px; color: #3C3489; font-weight: 500; margin: 0 0 4px; }
     h3 { font-family: 'Playfair Display', serif; font-size: 15px; color: #3C3489; font-weight: 500; margin: 0 0 10px; }
+    .page-header { text-align: center; margin-bottom: 24px; }
 
-    /* ── RESPONSIVE: TABLET ── */
+    /* ── HOME ── */
+    .home-hero { text-align: center; padding: 28px 0 16px; }
+    .home-hero-line { width: 36px; height: 1px; background: #AFA9EC; margin: 0 auto 16px; }
+    .home-hero h1 { font-family: 'Playfair Display', serif; font-size: 20px; color: #3C3489; font-weight: 500; margin: 0 0 8px; line-height: 1.4; }
+    .home-hero-sub { color: #7a6fa8; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; }
+    .home-hero-quote { color: #888780; font-size: 13px; max-width: 420px; margin: 12px auto 0; font-style: italic; font-family: 'Playfair Display', serif; line-height: 1.7; }
+    .home-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 24px; }
+    .home-card { background: #fff; border: 0.5px solid #d8ccf0; border-radius: 12px; padding: 16px 10px; text-align: center; cursor: pointer; transition: border-color 0.2s; }
+    .home-card:hover { border-color: #AFA9EC; }
+    .home-card i { font-size: 20px; color: #7F77DD; margin-bottom: 6px; display: block; }
+    .home-card span { font-size: 10px; color: #534AB7; font-weight: 500; letter-spacing: 0.04em; line-height: 1.3; display: block; }
+
+    /* ── PROFIL ── */
+    .photo-circle { width: 120px; height: 120px; border-radius: 50%; background: #EEEDFE; border: 2px solid #AFA9EC; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; overflow: hidden; }
+    .photo-circle img { width: 100%; height: 100%; object-fit: cover; }
+    .photo-placeholder { display: flex; flex-direction: column; align-items: center; gap: 6px; color: #7F77DD; font-size: 10px; text-align: center; padding: 0 8px; }
+
+    /* ── LAMPIRAN ── */
+    .lampiran-item { display: flex; gap: 16px; align-items: flex-start; background: #fff; border: 0.5px solid #d8ccf0; border-radius: 12px; padding: 18px 20px; margin-bottom: 14px; }
+    .lampiran-icon { background: #EEEDFE; color: #534AB7; border-radius: 10px; width: 40px; height: 40px; min-width: 40px; display: flex; align-items: center; justify-content: center; font-size: 18px; }
+    .lampiran-content h3 { margin: 0 0 4px; }
+    .lampiran-content p { margin: 0 0 10px; color: #666; font-size: 12px; }
+    .btn-drive { display: inline-flex; align-items: center; gap: 6px; background: #534AB7; color: #fff; font-family: 'Lato', sans-serif; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; padding: 8px 16px; border-radius: 20px; text-decoration: none; transition: background 0.2s; }
+    .btn-drive:hover { background: #3C3489; }
+
+    /* ── RESPONSIVE ── */
     @media (min-width: 480px) {
       .porto-header { padding: 18px 28px 0; }
       .porto-brand-name { font-size: 15px; }
-      .porto-nav button { font-size: 11px; padding: 12px 14px; }
+      .porto-nav button { font-size: 11px; padding: 12px 12px; }
       .porto-page { padding: 36px 28px; }
       .card-lavender { padding: 24px; margin-bottom: 20px; }
       .photo-circle { width: 140px; height: 140px; }
@@ -275,12 +79,11 @@
       h2 { font-size: 20px; }
       h3 { font-size: 16px; }
     }
-
-    /* ── RESPONSIVE: DESKTOP ── */
     @media (min-width: 720px) {
       .porto-page { padding: 40px 60px; }
-      .porto-nav button { font-size: 11px; padding: 12px 18px; }
+      .porto-nav button { font-size: 11px; padding: 12px 16px; }
       .home-hero h1 { font-size: 26px; }
+      .home-cards { grid-template-columns: repeat(6, 1fr); }
     }
   </style>
 </head>
@@ -296,10 +99,13 @@
     <button onclick="showPage('profil')">Profil</button>
     <button onclick="showPage('artefak')">Analisis Artefak</button>
     <button onclick="showPage('model')">Model Guru</button>
+    <button onclick="showPage('refleksi')">Refleksi PPL</button>
+    <button onclick="showPage('filosofi')">Filosofi</button>
+    <button onclick="showPage('lampiran')">Lampiran</button>
   </nav>
 </header>
 
-<!-- HOME -->
+<!-- ══ HOME ══ -->
 <div id="page-home" class="porto-page active">
   <div class="home-hero">
     <div class="home-hero-line"></div>
@@ -310,32 +116,37 @@
   </div>
   <div class="home-cards">
     <div class="home-card" onclick="showPage('profil')">
-      <i class="ti ti-user" aria-hidden="true"></i>
-      <span>Profil</span>
+      <i class="ti ti-user"></i><span>Profil</span>
     </div>
     <div class="home-card" onclick="showPage('artefak')">
-      <i class="ti ti-file-text" aria-hidden="true"></i>
-      <span>Analisis Artefak</span>
+      <i class="ti ti-file-text"></i><span>Analisis Artefak</span>
     </div>
     <div class="home-card" onclick="showPage('model')">
-      <i class="ti ti-star" aria-hidden="true"></i>
-      <span>Model Guru</span>
+      <i class="ti ti-star"></i><span>Model Guru</span>
+    </div>
+    <div class="home-card" onclick="showPage('refleksi')">
+      <i class="ti ti-refresh"></i><span>Refleksi PPL</span>
+    </div>
+    <div class="home-card" onclick="showPage('filosofi')">
+      <i class="ti ti-bulb"></i><span>Filosofi</span>
+    </div>
+    <div class="home-card" onclick="showPage('lampiran')">
+      <i class="ti ti-folder"></i><span>Lampiran</span>
     </div>
   </div>
 </div>
 
-<!-- PROFIL -->
+<!-- ══ PROFIL ══ -->
 <div id="page-profil" class="porto-page">
-  <div class="profil-header">
+  <div class="page-header">
     <span class="section-tag">Profil Mahasiswa</span>
     <h2>Tentang Saya</h2>
     <div class="lavender-divider"></div>
   </div>
-
   <div class="photo-circle">
-    <img src="foto.jpeg" alt="Foto Sandya" />
+    <img src="foto.jpg" alt="Foto Sandya" />
   </div>
-
+  </div>
   <div class="card-lavender">
     <p>Saya, Sandyakalaning Permata Megawati yang biasa dipanggil Sandya, merupakan lulusan Program Studi Pendidikan Luar Biasa Universitas Negeri Malang. Saya memiliki ketertarikan pada dunia pendidikan khusus serta minat dalam bidang sastra, khususnya menulis novel dan cerpen sebagai bentuk pengembangan kreativitas di waktu luang.</p>
     <p>Saya berasal dari Kabupaten Sidoarjo, Jawa Timur, yang dikenal sebagai Kota Udang dan Kota Bandeng karena hasil perikanannya yang melimpah. Sidoarjo memiliki sejarah perkembangan yang erat dengan sektor perdagangan, tambak, dan industri sehingga menjadi salah satu wilayah penunjang penting di sekitar Surabaya. Selain itu, Sidoarjo juga memiliki destinasi unik yaitu Pulau Lusi (Lumpur Sidoarjo), kawasan wisata yang terbentuk dari endapan lumpur dan menjadi simbol ketahanan serta kemampuan masyarakat untuk bangkit dan beradaptasi setelah bencana.</p>
@@ -346,56 +157,47 @@
   <div class="quote-block">"Pendidikan bukan hanya tentang mengajar, tetapi tentang membantu setiap anak percaya bahwa mereka mampu berkembang."</div>
 </div>
 
-<!-- ANALISIS ARTEFAK -->
+<!-- ══ ANALISIS ARTEFAK ══ -->
 <div id="page-artefak" class="porto-page">
-  <div style="text-align:center;margin-bottom:24px;">
+  <div class="page-header">
     <span class="section-tag">Analisis Artefak</span>
     <h2>Refleksi Pembelajaran</h2>
     <div class="lavender-divider"></div>
   </div>
-
   <div class="card-lavender">
     <h3>Kendala dalam Penyusunan Perangkat Pembelajaran</h3>
     <p>Kendala yang saya alami dalam penyusunan perangkat pembelajaran adalah menentukan materi, media, serta strategi pembelajaran yang sesuai dengan karakteristik murid yang beragam. Pada praktik pembelajaran ini, terdapat dua murid dengan kebutuhan yang berbeda, yaitu murid low vision dan murid low vision dengan hambatan intelektual (tunagrahita).</p>
     <p>Perbedaan karakteristik tersebut membuat saya perlu mempertimbangkan aksesibilitas media, tingkat kesulitan materi, serta bentuk aktivitas pembelajaran agar dapat dipahami oleh kedua murid secara optimal. Saya mengalami kesulitan dalam memilih media pembelajaran yang tidak hanya dapat diakses secara visual oleh murid low vision, tetapi juga cukup sederhana dan konkret bagi murid dengan hambatan intelektual.</p>
     <p>Selain itu, saya juga menghadapi kendala dalam menentukan metode dan strategi pembelajaran yang mampu merangkul kebutuhan belajar kedua murid secara bersamaan. Melalui proses tersebut, saya belajar bahwa penyusunan perangkat pembelajaran pada kelas dengan kebutuhan belajar yang beragam memerlukan fleksibilitas, kreativitas, serta pemahaman yang mendalam terhadap karakteristik setiap murid.</p>
   </div>
-
   <div class="card-lavender">
     <h3>Teori atau Konsep Pedagogi yang Diadopsi</h3>
     <p>Dalam penyusunan perangkat pembelajaran, saya menggunakan beberapa konsep pedagogi yang disesuaikan dengan karakteristik murid, yaitu Contextual Teaching and Learning (CTL), pembelajaran berdiferensiasi, pendekatan multisensori, serta penguatan positif dan pengulangan.</p>
-    <p>Konsep utama yang digunakan adalah Contextual Teaching and Learning (CTL). Model ini diterapkan karena pembelajaran dikaitkan dengan pengalaman nyata dan aktivitas langsung yang dekat dengan kehidupan murid. Penerapan CTL terlihat melalui kegiatan mengamati video, gambar, serta penggunaan benda konkret agar murid lebih mudah memahami materi.</p>
-    <p>Selain itu, saya juga menerapkan pembelajaran berdiferensiasi karena karakteristik murid yang berbeda, yaitu murid low vision dan murid low vision dengan hambatan intelektual. Diferensiasi dilakukan melalui penyesuaian media pembelajaran, penyederhanaan instruksi, penggunaan gambar dengan ukuran fleksibel, pengulangan materi, serta pendampingan individual sesuai kebutuhan murid.</p>
-    <p>Pendekatan multisensori juga digunakan dengan melibatkan indera penglihatan, pendengaran, dan gerak melalui video, aktivitas praktik langsung, dan penggunaan media konkret. Selain itu, penerapan penguatan positif dan pengulangan dilakukan untuk membantu meningkatkan motivasi belajar, mempertahankan fokus murid, serta memperkuat pemahaman materi.</p>
+    <p>Konsep utama yang digunakan adalah Contextual Teaching and Learning (CTL). Model ini diterapkan karena pembelajaran dikaitkan dengan pengalaman nyata dan aktivitas langsung yang dekat dengan kehidupan murid. Selain itu, saya juga menerapkan pembelajaran berdiferensiasi melalui penyesuaian media pembelajaran, penyederhanaan instruksi, penggunaan gambar dengan ukuran fleksibel, pengulangan materi, serta pendampingan individual sesuai kebutuhan murid.</p>
+    <p>Pendekatan multisensori juga digunakan dengan melibatkan indera penglihatan, pendengaran, dan gerak melalui video, aktivitas praktik langsung, dan penggunaan media konkret. Penguatan positif dan pengulangan dilakukan untuk membantu meningkatkan motivasi belajar, mempertahankan fokus murid, serta memperkuat pemahaman materi.</p>
   </div>
-
   <div class="card-lavender">
     <h3>Faktor Keberhasilan Penerapan Produk Pembelajaran</h3>
     <p>Keberhasilan penerapan perangkat pembelajaran dipengaruhi oleh penggunaan media dan aktivitas belajar yang disesuaikan dengan karakteristik murid. Penggunaan gambar dengan ukuran fleksibel, video pembelajaran, benda konkret, serta praktik langsung membantu murid lebih mudah memahami materi pembelajaran.</p>
-    <p>Selain itu, penggunaan pembelajaran berbasis pengalaman nyata membuat murid lebih aktif selama proses belajar. Murid tidak hanya mendengarkan penjelasan guru, tetapi juga melakukan kegiatan secara langsung. Aktivitas tersebut membantu meningkatkan fokus, minat belajar, dan pemahaman murid.</p>
     <p>Faktor keberhasilan lainnya adalah penggunaan instruksi yang sederhana, pengulangan materi, serta pendampingan individual sesuai kebutuhan murid. Kerja sama antara guru, murid, dan lingkungan belajar juga menjadi faktor penting dalam mendukung keberhasilan pembelajaran sehingga suasana kelas menjadi lebih nyaman, aman, dan mendukung proses belajar murid.</p>
   </div>
-
   <div class="card-lavender">
     <h3>Perubahan Komponen untuk Situasi Kelas yang Berbeda</h3>
     <p>Perangkat pembelajaran yang telah disusun masih memungkinkan untuk disesuaikan dengan situasi dan karakteristik kelas yang berbeda. Penyesuaian dapat dilakukan pada media pembelajaran, metode pembelajaran, bentuk asesmen, maupun tingkat kesulitan materi.</p>
-    <p>Jika diterapkan pada kelas dengan kemampuan murid yang lebih beragam, saya dapat menambahkan diferensiasi tugas dan aktivitas belajar sesuai kemampuan masing-masing murid. Pada murid dengan kemampuan akademik lebih tinggi, kegiatan pembelajaran dapat dikembangkan melalui diskusi sederhana, permainan edukatif, atau penambahan materi pengayaan.</p>
-    <p>Selain itu, apabila pembelajaran diterapkan pada murid tanpa hambatan penglihatan, media visual dapat dibuat lebih variatif dan kompleks. Sebaliknya, jika terdapat murid dengan kebutuhan dukungan yang lebih tinggi, maka penggunaan benda konkret, instruksi sederhana, pengulangan, dan pendampingan individual perlu lebih diperkuat. Melalui penyesuaian tersebut, perangkat pembelajaran diharapkan tetap fleksibel, adaptif, dan mampu memenuhi kebutuhan belajar murid pada berbagai kondisi kelas.</p>
+    <p>Jika diterapkan pada kelas dengan kemampuan murid yang lebih beragam, saya dapat menambahkan diferensiasi tugas dan aktivitas belajar sesuai kemampuan masing-masing murid. Melalui penyesuaian tersebut, perangkat pembelajaran diharapkan tetap fleksibel, adaptif, dan mampu memenuhi kebutuhan belajar murid pada berbagai kondisi kelas.</p>
   </div>
 </div>
 
-<!-- MODEL GURU -->
+<!-- ══ MODEL GURU ══ -->
 <div id="page-model" class="porto-page">
-  <div style="text-align:center;margin-bottom:24px;">
+  <div class="page-header">
     <span class="section-tag">Model Guru yang Dituju</span>
     <h2>Visi sebagai Pendidik</h2>
     <div class="lavender-divider"></div>
   </div>
-
   <div class="card-lavender">
     <p>Sebagai calon guru profesional, saya ingin menjadi pendidik yang mampu menciptakan pembelajaran yang inklusif, adaptif, dan berpusat pada kebutuhan murid. Saya percaya bahwa setiap murid memiliki potensi, karakteristik, dan cara belajar yang berbeda sehingga guru perlu mampu menyesuaikan pembelajaran agar setiap murid dapat berkembang secara optimal.</p>
   </div>
-
   <div class="card-lavender">
     <h3>Misi Guru yang Ingin Dituju</h3>
     <div class="mission-item"><div class="mission-num">1</div><p>Menciptakan pembelajaran yang inklusif dan nyaman bagi seluruh murid.</p></div>
@@ -403,7 +205,6 @@
     <div class="mission-item"><div class="mission-num">3</div><p>Mengembangkan media dan strategi pembelajaran yang sesuai dengan kebutuhan murid berkebutuhan khusus.</p></div>
     <div class="mission-item"><div class="mission-num">4</div><p>Menjadi guru yang terus belajar dan mampu beradaptasi dengan perkembangan pendidikan dan teknologi.</p></div>
   </div>
-
   <div class="card-lavender">
     <h3>Kompetensi yang Ingin Dikembangkan</h3>
     <div class="mission-item"><div class="mission-num">1</div><p>Kompetensi pedagogik dalam menyusun pembelajaran berdiferensiasi.</p></div>
@@ -412,7 +213,6 @@
     <div class="mission-item"><div class="mission-num">4</div><p>Kemampuan komunikasi dan manajemen kelas.</p></div>
     <div class="mission-item"><div class="mission-num">5</div><p>Kemampuan melakukan refleksi dan evaluasi pembelajaran secara berkelanjutan.</p></div>
   </div>
-
   <div class="card-lavender">
     <h3>Karakter Guru yang Ingin Dibangun</h3>
     <div class="mission-item"><div class="mission-num">1</div><p>Sabar dan empatik terhadap kebutuhan murid.</p></div>
@@ -421,8 +221,117 @@
     <div class="mission-item"><div class="mission-num">4</div><p>Reflektif dan terbuka terhadap masukan untuk pengembangan diri.</p></div>
     <div class="mission-item"><div class="mission-num">5</div><p>Tidak mudah menyerah dalam mendampingi murid belajar dan berkembang.</p></div>
   </div>
-
   <div class="quote-block">"Guru bukan hanya mengajarkan ilmu, tetapi juga membantu murid percaya pada kemampuan dirinya sendiri."</div>
+</div>
+
+<!-- ══ REFLEKSI PPL ══ -->
+<div id="page-refleksi" class="porto-page">
+  <div class="page-header">
+    <span class="section-tag">Refleksi Akhir PPL Terbimbing</span>
+    <h2>Pengalaman & Pembelajaran</h2>
+    <div class="lavender-divider"></div>
+  </div>
+  <div class="card-lavender">
+    <h3>Apa yang Telah Saya Pelajari Selama PPL Terbimbing</h3>
+    <p>Selama mengikuti Praktik Pengalaman Lapangan (PPL) Terbimbing, saya memperoleh banyak pengalaman dan pembelajaran mengenai proses menjadi seorang guru profesional, khususnya dalam pembelajaran bagi murid berkebutuhan khusus. Saya belajar bahwa proses pembelajaran tidak hanya berfokus pada penyampaian materi, tetapi juga pada kemampuan guru memahami kebutuhan, karakteristik, dan kemampuan setiap murid.</p>
+    <p>Melalui kegiatan observasi, asistensi, hingga praktik mengajar, saya memahami bahwa setiap murid memiliki cara belajar yang berbeda sehingga guru perlu mampu menyesuaikan media, metode, strategi, serta bentuk asesmen agar pembelajaran dapat diakses dan dipahami oleh seluruh murid. Saya juga belajar bahwa pembelajaran yang efektif bukan hanya tentang tercapainya tujuan pembelajaran, tetapi juga bagaimana murid merasa nyaman, percaya diri, dan terlibat aktif selama proses belajar berlangsung.</p>
+    <p>Selain itu, saya belajar pentingnya kesabaran, komunikasi yang sederhana, pengelolaan kelas, serta kemampuan beradaptasi terhadap situasi pembelajaran yang tidak selalu berjalan sesuai rencana. PPL Terbimbing juga memberikan pengalaman bagi saya untuk lebih memahami penerapan pembelajaran berdiferensiasi, penggunaan media konkret, serta pentingnya pendekatan individual pada murid berkebutuhan khusus.</p>
+  </div>
+  <div class="card-lavender">
+    <h3>Pengalaman yang Menantang dan Solusinya</h3>
+    <p>Selama pelaksanaan PPL Terbimbing, terdapat beberapa pengalaman yang cukup menantang dalam proses pembelajaran. Tantangan utama yang saya hadapi adalah menyesuaikan pembelajaran dengan karakteristik murid yang berbeda dalam satu kelas, yaitu murid low vision dan murid low vision dengan hambatan intelektual (tunagrahita). Perbedaan kemampuan, fokus belajar, serta kebutuhan belajar murid membuat saya perlu lebih cermat dalam menentukan media, strategi, dan aktivitas pembelajaran.</p>
+    <p>Untuk mengatasi permasalahan tersebut, saya mencoba menggunakan media konkret, gambar dengan ukuran fleksibel, video sederhana, serta aktivitas praktik langsung agar pembelajaran lebih mudah dipahami. Saya juga menggunakan instruksi yang singkat dan sederhana, melakukan pengulangan materi, serta memberikan pendampingan individual sesuai kebutuhan murid. Selain itu, saya berusaha menciptakan suasana belajar yang nyaman dan memberikan penguatan positif agar murid lebih percaya diri dan aktif selama pembelajaran berlangsung.</p>
+    <p>Melalui pengalaman tersebut, saya belajar bahwa guru perlu memiliki fleksibilitas, kreativitas, dan kesabaran dalam menghadapi berbagai situasi pembelajaran. Tantangan selama PPL menjadi pengalaman berharga bagi saya untuk terus memperbaiki kemampuan mengajar dan memahami kebutuhan murid secara lebih mendalam.</p>
+  </div>
+  <div class="card-lavender">
+    <h3>Umpan Balik dan Saran Konstruktif untuk PPL Selanjutnya</h3>
+    <p>Dalam proses refleksi akhir PPL Terbimbing, saya memperoleh beberapa umpan balik dan saran konstruktif dari guru pamong maupun dosen pembimbing sebagai bahan evaluasi untuk memperbaiki kualitas pembelajaran pada tahap PPL selanjutnya. Salah satu masukan yang saya terima adalah suara saat mengajar masih kurang jelas sehingga perlu lebih ditingkatkan agar instruksi dan penjelasan materi dapat diterima murid dengan lebih baik.</p>
+    <p>Selain itu, saya juga mendapatkan masukan terkait pengelolaan kelas dan rasa percaya diri saat mengajar. Saya masih perlu belajar mengondisikan kelas dengan lebih baik, menjaga fokus murid selama pembelajaran berlangsung, serta meningkatkan kepercayaan diri agar penyampaian pembelajaran terlihat lebih tenang dan meyakinkan.</p>
+    <p>Masukan lainnya berkaitan dengan tempo pembelajaran yang terkadang terlalu cepat atau kurang menyesuaikan kondisi murid. Saya juga disarankan agar tidak terlalu kaku mengikuti RPP dan lebih fleksibel dalam penerapan pembelajaran di kelas. Melalui berbagai umpan balik tersebut, saya menyadari bahwa proses menjadi guru profesional memerlukan kemampuan refleksi diri dan kesiapan untuk terus belajar memperbaiki kekurangan.</p>
+  </div>
+</div>
+
+<!-- ══ FILOSOFI ══ -->
+<div id="page-filosofi" class="porto-page">
+  <div class="page-header">
+    <span class="section-tag">Filosofi Mengajar</span>
+    <h2>Landasan Nilai sebagai Pendidik</h2>
+    <div class="lavender-divider"></div>
+  </div>
+  <div class="card-lavender">
+    <p>Saya percaya bahwa pendidikan bukan hanya proses menyampaikan pengetahuan, tetapi juga proses membantu murid mengenali potensi, membangun rasa percaya diri, dan berkembang sesuai kemampuan yang dimilikinya. Setiap murid memiliki karakteristik, kebutuhan, serta cara belajar yang berbeda sehingga pembelajaran tidak dapat dilakukan dengan pendekatan yang sama untuk semua murid. Oleh karena itu, guru perlu mampu menciptakan pembelajaran yang inklusif, fleksibel, dan berpusat pada kebutuhan murid agar setiap anak memperoleh kesempatan belajar yang setara.</p>
+  </div>
+  <div class="card-lavender">
+    <h3>Nilai Ki Hajar Dewantara dalam Pembelajaran</h3>
+    <p>Prinsip tersebut sejalan dengan pemikiran Ki Hajar Dewantara yang menyatakan bahwa pendidikan harus menuntun segala kekuatan kodrat yang dimiliki anak agar mereka mampu mencapai keselamatan dan kebahagiaan setinggi-tingginya. Dalam proses pembelajaran, guru bukan hanya berperan sebagai penyampai materi, tetapi juga sebagai pembimbing dan fasilitator yang membantu murid berkembang sesuai potensi dirinya.</p>
+    <p>Filosofi <em>"Ing Ngarso Sung Tulodo, Ing Madya Mangun Karso, Tut Wuri Handayani"</em> menjadi pengingat bagi saya bahwa guru harus mampu menjadi teladan, membangun semangat belajar, serta memberikan dorongan dan pendampingan kepada murid selama proses belajar berlangsung.</p>
+  </div>
+  <div class="card-lavender">
+    <h3>Pembelajaran Bermakna dan Berdiferensiasi</h3>
+    <p>Selama praktik pembelajaran terbimbing, saya juga memahami pentingnya penerapan pembelajaran berdiferensiasi dan Contextual Teaching and Learning (CTL). Pembelajaran akan lebih bermakna ketika murid terlibat secara langsung melalui pengalaman nyata, penggunaan media konkret, serta aktivitas yang dekat dengan kehidupan sehari-hari. Karena itu, saya percaya bahwa pembelajaran tidak hanya berfokus pada hasil akademik, tetapi juga pada bagaimana murid merasa nyaman, aktif, dan mampu memahami materi sesuai kemampuannya.</p>
+  </div>
+  <div class="card-lavender">
+    <h3>Empati sebagai Landasan Mengajar</h3>
+    <p>Sebagai pribadi low vision, saya memahami bahwa setiap individu membutuhkan lingkungan yang mendukung dan kesempatan belajar yang adil. Pengalaman tersebut membentuk keyakinan saya bahwa guru harus memiliki empati, kesabaran, dan kemampuan beradaptasi terhadap kebutuhan murid. Bagi saya, guru profesional bukan hanya seseorang yang menguasai materi pembelajaran, tetapi juga sosok yang mampu menciptakan ruang belajar yang aman, menghargai perbedaan, dan membantu murid percaya pada kemampuan dirinya sendiri.</p>
+  </div>
+  <div class="quote-block">"Pendidikan bukan hanya tentang mengajar, tetapi tentang membantu setiap anak menemukan dan mengembangkan potensinya."</div>
+</div>
+
+<!-- ══ LAMPIRAN ══ -->
+<div id="page-lampiran" class="porto-page">
+  <div class="page-header">
+    <span class="section-tag">Lampiran</span>
+    <h2>Dokumen & Bukti Pelaksanaan PPL</h2>
+    <div class="lavender-divider"></div>
+  </div>
+
+  <div class="card-lavender" style="margin-bottom:24px;">
+    <p>Halaman ini memuat seluruh dokumen pendukung yang dihasilkan selama pelaksanaan Praktik Pengalaman Lapangan (PPL) Terbimbing. Lampiran mencakup dokumen penilaian dari guru pendamping, serta dokumentasi proses pembelajaran yang dibagi dalam tiga siklus. Setiap siklus berisi Rencana Pelaksanaan Pembelajaran (RPP) yang disusun secara terstruktur sesuai kebutuhan murid, serta video pelaksanaan pembelajaran sebagai bukti nyata praktik mengajar di kelas. Dokumen-dokumen ini merupakan bagian penting dari portofolio PPL sebagai bentuk pertanggungjawaban akademik dan refleksi perkembangan kompetensi mengajar selama program berlangsung.</p>
+  </div>
+
+  <div class="lampiran-item">
+    <div class="lampiran-icon"><i class="ti ti-clipboard-check"></i></div>
+    <div class="lampiran-content">
+      <h3>Lampiran Penilaian PPL Pendamping</h3>
+      <p>Dokumen penilaian yang diberikan oleh guru pamong dan dosen pembimbing selama pelaksanaan PPL Terbimbing, mencakup catatan observasi, umpan balik, dan evaluasi kompetensi mengajar.</p>
+      <a class="btn-drive" href="https://drive.google.com/drive/folders/1wkiQmyIxm837RsDHWYlwmUM14htcfcI-" target="_blank" rel="noopener">
+        <i class="ti ti-brand-google-drive"></i> Buka di Google Drive
+      </a>
+    </div>
+  </div>
+
+  <div class="lampiran-item">
+    <div class="lampiran-icon"><i class="ti ti-number-1"></i></div>
+    <div class="lampiran-content">
+      <h3>Siklus 1 — RPP & Video Pembelajaran</h3>
+      <p>Rencana Pelaksanaan Pembelajaran (RPP) siklus pertama beserta video dokumentasi pelaksanaan pembelajaran di kelas. Siklus ini merupakan tahap awal praktik mengajar secara terbimbing dengan pendampingan penuh dari guru pamong.</p>
+      <a class="btn-drive" href="https://drive.google.com/drive/folders/1wkiQmyIxm837RsDHWYlwmUM14htcfcI-" target="_blank" rel="noopener">
+        <i class="ti ti-brand-google-drive"></i> Buka di Google Drive
+      </a>
+    </div>
+  </div>
+
+  <div class="lampiran-item">
+    <div class="lampiran-icon"><i class="ti ti-number-2"></i></div>
+    <div class="lampiran-content">
+      <h3>Siklus 2 — RPP & Video Pembelajaran</h3>
+      <p>Rencana Pelaksanaan Pembelajaran (RPP) siklus kedua beserta video dokumentasi pembelajaran. Pada siklus ini, penyusunan RPP dan strategi pembelajaran telah disesuaikan berdasarkan refleksi dan umpan balik dari siklus sebelumnya.</p>
+      <a class="btn-drive" href="https://drive.google.com/drive/folders/1wkiQmyIxm837RsDHWYlwmUM14htcfcI-" target="_blank" rel="noopener">
+        <i class="ti ti-brand-google-drive"></i> Buka di Google Drive
+      </a>
+    </div>
+  </div>
+
+  <div class="lampiran-item">
+    <div class="lampiran-icon"><i class="ti ti-number-3"></i></div>
+    <div class="lampiran-content">
+      <h3>Siklus 3 — RPP & Video Pembelajaran</h3>
+      <p>Rencana Pelaksanaan Pembelajaran (RPP) siklus ketiga beserta video dokumentasi pembelajaran. Siklus ini merupakan tahap akhir PPL Terbimbing di mana penerapan pembelajaran telah mengalami perbaikan dan pengembangan secara berkelanjutan berdasarkan seluruh refleksi sebelumnya.</p>
+      <a class="btn-drive" href="https://drive.google.com/drive/folders/1wkiQmyIxm837RsDHWYlwmUM14htcfcI-" target="_blank" rel="noopener">
+        <i class="ti ti-brand-google-drive"></i> Buka di Google Drive
+      </a>
+    </div>
+  </div>
 </div>
 
 <script>
@@ -431,7 +340,7 @@
     document.querySelectorAll('.porto-nav button').forEach(b => b.classList.remove('active'));
     document.getElementById('page-' + id).classList.add('active');
     window.scrollTo({ top: 0, behavior: 'smooth' });
-    const idx = { home: 0, profil: 1, artefak: 2, model: 3 }[id];
+    const idx = { home:0, profil:1, artefak:2, model:3, refleksi:4, filosofi:5, lampiran:6 }[id];
     document.querySelectorAll('.porto-nav button')[idx].classList.add('active');
   }
 </script>
